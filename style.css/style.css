@@ -8,7 +8,7 @@ body{
     background-color: rgba(1, 4, 173, 0.952);
 }
 
-.login{
+section.login{
     width: 400px;
     height: 500px;
     background-color: #ffff;
@@ -18,26 +18,51 @@ body{
     
 }
 
-.sac{
-    justify-content: center;
+.reader h1 {
+    font-size: 2.8rem;
     text-align: center;
     color: rgba(1, 4, 173, 0.952);
     padding-top: 25px;
 }
 
-form {
+.reader p{
     text-align: center;
+    color: rgba(1, 4, 173, 0.952);
+}
+
+.formulario{
+    text-align: center;
+    padding-top: 20px;
+}
+
+form{
+    padding-top: 30px;
+    
+}
+
+.text {
+    width: 380px;
     background-color: aqua;
+    margin: auto;
+    padding-bottom: 10px;
+    
 }
 
-form p{
+.text p{
     text-align: left;
-}
-.input{
-    align-items: center;
-    justify-content: center;
+    margin-left: 40px;
+    font-size: 1.2rem;
+    color: rgba(1, 4, 173, 0.952);
 }
 
-.img{
-    margin-top: 100px;
+.text input{
+    padding: 5px;
+    width: 330px;
+    border-radius: 5px;
+}
+
+.text i {
+    font-size: 1.5rem;
+    color: rgba(1, 4, 173, 0.952);
+
 }
