@@ -4,13 +4,35 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color: rgba(1, 4, 173, 0.952);
+}
+
 .login{
-    width: 300px;
-    height: 200px;
-    background-color: rgb(13, 32, 134);
+    width: 400px;
+    height: 500px;
+    background-color: #ffff;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 10px;
     
 }
 
+.sac{
+    justify-content: center;
+    text-align: center;
+    color: rgba(1, 4, 173, 0.952);
+    padding-top: 25px;
+}
+
+form {
+    text-align: center;
+    background-color: aqua;
+}
+
+form p{
+    text-align: left;
+}
 .input{
     align-items: center;
     justify-content: center;
