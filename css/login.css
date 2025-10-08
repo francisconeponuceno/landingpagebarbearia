@@ -196,3 +196,18 @@ body {
     font-size: 0.8rem;
     color: var(--cor4);
 }
+
+/* MIDIA QUERY*/
+
+@media (max-width: 420px) {
+
+    .container {
+        height: 100vh;
+        margin: 0;
+    }
+
+    .container .principal, .login {
+        height: 100vh;
+        margin: 0;
+    }
+}

@@ -161,3 +161,17 @@ body {
     color: var(--cor2);
 }
 
+/* MIDIA QUERY*/
+
+@media (max-width: 420px) {
+
+    .container {
+        height: 100vh;
+        margin: 0;
+    }
+
+    .container .principal, .cadastro {
+        height: 100vh;
+        margin: 0;
+    }
+}
