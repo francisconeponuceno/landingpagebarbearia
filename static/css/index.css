@@ -1,0 +1,581 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --cor1: #FEFBF5; /* Fundo / Neutro claro (background principal) */
+    --cor2: #563A22; /* Primária (títulos, menus, elementos fortes) */
+    --cor3: #F1D7B4; /* Secundária (destaques suaves, cards, caixas de apoio) */
+    --cor4: #9B7C64; /* Apoio (texto secundário, bordas, sombras sutis) */
+    --cor5: #F18836; /* Cor de Destaque (botões, links, chamadas de ação) */
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: var(--cor1);
+}
+
+
+/* ESTILO DE BOTOES */
+.botao {
+    width: 200px;
+    padding: 10px 20px;
+    background-color: var(--cor5);
+    border-radius: 10px;
+    border: 0;
+    color: var(--cor1);
+    font-weight: bolder;
+    transition: calc(1s);
+}
+
+.botao:hover {
+    background: none;
+    color: var(--cor5);
+    border:  1px solid var(--cor5);
+}
+
+/* FIM DO ESTILO DE BOTOES */
+
+/* INICIO ESTILO HEADER */
+header {
+    background-color: var(--cor3);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px 0 25px;
+    height: 65px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 40px;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    color: var(--cor2);
+}
+
+.logo span {
+    color: var(--cor5);
+}
+
+.menu {
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.menu a {
+    color: var(--cor2);
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: var(--cor5);
+    background-color: var(--cor2);
+    padding: 3px 15px;
+    border-radius: 15px;
+    transition: calc(0.8s);
+}
+
+/* ESTILO MENU MOBYLI */
+
+.menu-mobily {
+    width: 100%;
+    display: flex;
+    position: fixed;
+    top: 65px;
+    left: -100%;
+    transition: .7s ease-in-out;
+    padding: 5px;
+    background-color: var(--cor4);
+    z-index: 1000;
+    border-radius: 0 0 10px 10px;
+}
+
+.menu-active {
+    left: 0;
+}
+
+.sub-menu-link {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 7px;
+}
+
+.sub-menu-link a {
+    color: var(--cor1);
+    font-size: 1rem;
+}
+
+.sub-menu-link a:hover {
+    color: var(--cor2);
+}
+
+.sub-menu-link .entrar {
+    background-color: var(--cor5);
+    padding: 5px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    text-align: center;
+}
+
+
+.menuBuger {
+    display: none;
+    cursor: pointer;
+}
+
+
+/* FIM DO ESTILO MOBYLI */
+
+.login {
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+   
+}
+
+.login i, a {
+    color: var(--cor2);
+    font-size: 1.3rem;
+    align-items: center;
+    text-decoration: none;
+}
+
+.login a:hover {
+    color: var(--cor5);
+    text-decoration: underline;
+}
+
+
+/* FIM DO ESTILO HEADER*/ 
+
+/* INICIO ESTILO BANNER*/
+.banner{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #9B7C64;
+    background: url('/static/imagens/img-banner/fundo.png') no-repeat;
+ 
+}
+
+.banner .destaque {
+    width: 60%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+   
+}
+
+.banner .destaque h1 {
+    font-size: 3rem;
+    color: var(--cor1);
+}
+
+.banner .destaque span {
+    color: var(--cor5);
+}
+
+.banner .destaque p {
+    color: var(--cor1);
+    font-size: 1.5rem;
+}
+
+.banner .agendar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.banner .agendar .btn-sevico {
+    width: 200px;
+    padding: 10px 20px;
+    background: none;
+    border-radius: 10px;
+    border:  1px solid var(--cor5);
+    color: var(--cor1);
+    font-weight: bolder;
+    transition: calc(1s);
+}
+
+.banner .agendar .btn-sevico:hover {
+    background-color: var(--cor5);
+}
+
+/* FIM ESTILO BANNER*/
+
+/* INICIO DO ESTILO SERVIÇOS */
+
+.servico {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    color: var(--cor2);
+}
+
+.servico .titulo {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.servico .titulo h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: var(--cor2);
+}
+
+.servico .titulo span {
+    color: var(--cor5);
+}
+
+.servico .titulo p {
+    font-size: 1.1rem;
+}
+
+.servico .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.servico .card {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    align-items: center;
+    border-radius: 5px;
+    height: 400px;
+    padding: 10px;
+    box-shadow: 0 .5rem 1rem rgb(0, 0, 0, 0.2);
+    transition: .4s linear;
+    color: var(--cor2);
+}
+
+.servico .card:hover {
+    transform: scale(1.05);
+}
+
+.servico .card-icone {
+    align-self: center;
+    margin-bottom: 12px;
+}
+
+.servico .card i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor5);
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    color: var(--cor1);
+    margin-bottom: 10px;
+}
+
+
+.servico .card h3 {
+    color: var(--cor2);
+    font-size: 1.2rem;
+}
+
+.servico .card p {
+    font-size: 0.9rem;
+}
+
+.servico .card li::marker {
+    color: var(--cor5);
+}
+
+.servico .card li span {
+    color: var(--cor2);
+    font-weight: bold;
+}
+
+.servico .card form {
+    margin-top: auto;
+}
+
+/* FIM DO ESTILO SERVIÇOS */
+
+/* INICIO DO ESTILO SOBRE NOS */
+
+.sobre-nos {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.sobre-nos h1 {
+    font-size: 2.8rem;
+    color: var(--cor2);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.sobre-nos span {
+    color: var(--cor5);
+}
+
+.sobre-nos .sobre {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px;
+    
+}
+
+.sobre-nos .sobre img {
+    width: 500px;
+    height: 500px;
+}
+
+.sobre-nos .sobre .historia {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.sobre-nos .sobre .historia p {
+    font-size: 1.3rem;
+    color: var(--cor2);
+}
+
+/* FIM DO ESTILO SOBRE NOS */
+
+/* INICIO DO ESTILO RODAPÉ */
+footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    background-color: #563A22;
+    padding: 10px;
+    color: var(--cor1);
+}
+
+
+footer .geral {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+footer .geral h3 {
+    font-size: 1.3rem;
+    color: var(--cor5);
+}
+
+footer .geral a {
+    color: var(--cor1);
+    font-size: 2rem;
+}
+
+footer .geral a:hover {
+    color: var(--cor5);
+}
+
+footer .direitos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 0.8rem;
+}
+
+/* INICIO DO ESTILO RODAPÉ */
+
+/* INICIO MIDIA QUERY */
+
+@media (max-width: 767px) {
+
+    .banner .destaque h1 {
+        font-size: 1.8rem;
+    }
+
+    .menu, .login-icone {
+        display: none;
+    }
+
+    .menuBuger {
+        display: flex;
+    }
+
+    .sobre-nos {
+        display: flex;
+        gap: 2px;
+    }
+
+    .sobre-nos .sobre img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .sobre-nos  h1 {
+        font-size: 2rem;
+    }
+
+
+    .sobre-nos .sobre .historia p {
+        font-size: 0.7rem;
+    }
+
+    .geral .rodape h3 {
+        font-size: 1rem;
+    }
+
+    .geral .rodape a {
+        font-size: 1rem;
+    }
+
+    .geral p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 675px) {
+
+    .logo img {
+        width: 30px;
+    }
+
+    .logo h1 {
+        font-size: 1.3rem;
+    }
+
+    .login {
+        padding-right: 15px;
+    }
+
+    .login a {
+        font-size: 1rem;
+    }
+
+    .banner .destaque h1 {
+        font-size: 1.2rem;
+    }
+
+    .banner .destaque p {
+        font-size: 1rem;
+    }
+
+    .agendar {
+        width: 100%;
+        justify-content: center;
+    }
+
+
+    .servico .titulo h1 {
+        font-size: 1.8rem;
+    }
+
+    .servico .titulo p {
+        font-size: 1rem;
+        padding: 5px;
+
+    }
+
+    .sobre-nos h1 {
+        font-size: 1.8rem;
+    }
+
+    .sobre-nos .sobre .imagem {
+        width: 100%;
+        margin-bottom: 2px;
+    }
+
+    .sobre-nos .sobre .imagem img {
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+    }
+
+    .sobre-nos .historia {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+    }
+
+    .sobre-nos  .sobre .historia p {
+        font-size: 0.8rem;
+        padding: 10px;
+        margin-bottom: 0px;
+    }
+
+    .geral {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .geral .rodape {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .geral .rodape h3 {
+        font-size: 1.3rem;
+    }
+
+
+    
+}
+
+/* INICIO MIDIA QUERY */
