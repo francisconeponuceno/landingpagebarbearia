@@ -112,6 +112,10 @@ header {
    display: none;
 }
 
+.ocuto {
+    display: none;
+}
+
 .menu-mobily {
     width: 100%;
     display: flex;
@@ -304,6 +308,50 @@ header {
 /* FIM ESTILO MINHAS RESERVAS */
 
 
+/* INICIO DO ESTILO PERFIL */
+
+.minhas-reservas .card-servico .perfil {
+    width: 100%;
+}
+
+.minhas-reservas .card-servico .perfil h2, h4 {
+   font-size: 1.6rem;
+   color: var(--cor2);
+}
+
+.minhas-reservas .card-servico .perfil .formulario form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    flex-direction: column;
+    width: 100%;
+}
+
+.minhas-reservas .card-servico .perfil .formulario form label {
+    font-weight: bold;
+    color: var(--cor2);
+}
+
+.minhas-reservas .card-servico .perfil .formulario form input {
+    margin-bottom: 20px;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid var(--cor3);
+    outline: none;
+}
+
+.minhas-reservas .card-servico .perfil .formulario form .botoes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* FIM DO ESTILO PERFI */
+
+
+
 
 /* MIDIA QUERY */
 
@@ -383,4 +431,10 @@ header {
         gap: 2px;
         
     }
+
+    /*#################################*/
+    .minhas-reservas .card-servico .perfil h2, h4 {
+   font-size: 1.2rem;
+   color: var(--cor2);
+}
 }
