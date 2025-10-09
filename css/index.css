@@ -189,7 +189,11 @@ header {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image: url("../imagens/img-banner/fundo.png");
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+            url("../imagens/img-banner/fundo1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
 }
 
 
