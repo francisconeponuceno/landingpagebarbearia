@@ -269,7 +269,7 @@ header {
     margin-bottom: 10px;
 }
 
-.confirmacao .confirmado .status{
+.status{
     background-color: var(--cor5);
     font-size: 0.8rem;
     text-align: center;
@@ -343,12 +343,12 @@ header {
     .reservas .minhas-reservas .card-servico .servico .icone i{
         font-size: 1.1rem;
         padding: 0;
-        width: 35px;
-        height: 35px;
+        width: 33px;
+        height: 33px;
     }
 
     .reservas .minhas-reservas .card-servico .servico .descricao h2 {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 
     .reservas .minhas-reservas .card-servico .servico .descricao .data-hora i, span {
@@ -363,15 +363,24 @@ header {
         align-items: end;
         justify-content: end;
         margin-top: auto;
-        
+    }
+
+    .status {
+        padding: 2px 2px 2px 2px;
+        font-size: 0.7rem;
     }
 
     .minhas-reservas .confirmacao .confirmado span, h2 {
         font-size: 0.9rem;
     }
 
+    .minhas-reservas .confirmacao .reagendar {
+        gap: 2px;
+    }
+
     .minhas-reservas .confirmacao .reagendar button {
         font-size: 0.7rem;
+        gap: 2px;
         
     }
 }
