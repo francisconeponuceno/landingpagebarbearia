@@ -327,21 +327,51 @@ header {
 
 @media (max-width: 540px) {
 
+    .reservas .minhas-reservas .card-servico {
+       padding: 15px 5px;
+       display: flex;
+       flex-wrap: wrap;
+    }
+
     .reservas .minhas-reservas .card-servico .servico {
        display: flex;
-       flex-direction: column;
        align-items: center;
        margin-bottom: 5px;
+       gap: 5px;
     }
+
+    .reservas .minhas-reservas .card-servico .servico .icone i{
+        font-size: 1.1rem;
+        padding: 0;
+        width: 35px;
+        height: 35px;
+    }
+
+    .reservas .minhas-reservas .card-servico .servico .descricao h2 {
+        font-size: 0.9rem;
+    }
+
+    .reservas .minhas-reservas .card-servico .servico .descricao .data-hora i, span {
+        font-size: 0.8rem;
+    }
+
 
 
     .minhas-reservas .confirmacao {
         display: flex;
         flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
+        align-items: end;
+        justify-content: end;
         margin-top: auto;
-        width: 100%;
+        
     }
 
+    .minhas-reservas .confirmacao .confirmado span, h2 {
+        font-size: 0.9rem;
+    }
+
+    .minhas-reservas .confirmacao .reagendar button {
+        font-size: 0.7rem;
+        
+    }
 }
