@@ -134,6 +134,7 @@ header {
 .menu-mobily .sub-menu-link .login-mobili {
     margin-bottom: 10px;
     padding-left: 10px;
+    cursor: pointer;
 }
 
 .menu-mobily .sub-menu-link .login-mobili i {
