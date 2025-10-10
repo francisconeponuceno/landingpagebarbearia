@@ -12,8 +12,63 @@ function menuShow() {
         icone.classList.add('fa-xmark');
     }
 
+}
+
+    let botao_1 = document.querySelector('.botao_1');
+    let botao_2 = document.querySelector('.botao_2');
+    let botao_3 = document.querySelector('.botao_3');
+
+    let secao_1 = document.querySelector('.secao_1');
+    let secao_2 = document.querySelector('.secao_2');
+    let secao_3 = document.querySelector('.secao_3');
+
+function sidbar_minhas_reservas() {
     
+    if (!botao_1.classList.contains('select')) {
+        botao_1.classList.add('select');
+        botao_2.classList.remove('select'); 
+        botao_3.classList.remove('select');
 
+        secao_1.classList.remove('ocuto');
+        secao_1.classList.add('minhas-reservas');
 
+        secao_2.classList.remove('minhas-reservas');
+        secao_2.classList.add('ocuto');
+        secao_3.classList.remove('minhas-reservas');
+        secao_3.classList.add('ocuto');
+    }
+} 
 
+function sidbar_novo_agendamento() {
+    if (!botao_2.classList.contains('select')) {
+
+        botao_2.classList.add('select');
+        botao_1.classList.remove('select'); 
+        botao_3.classList.remove('select');
+
+        secao_2.classList.remove('ocuto');
+        secao_2.classList.add('minhas-reservas');
+
+        secao_1.classList.remove('minhas-reservas');
+        secao_1.classList.add('ocuto');
+        secao_3.classList.remove('minhas-reservas');
+        secao_3.classList.add('ocuto');
+    }
+}
+
+function sidbar_perfil() {
+    if (!botao_3.classList.contains('select')) {
+
+        botao_3.classList.add('select');
+        botao_1.classList.remove('select'); 
+        botao_2.classList.remove('select');
+
+        secao_3.classList.remove('ocuto');
+        secao_3.classList.add('minhas-reservas');
+
+        secao_1.classList.remove('minhas-reservas');
+        secao_1.classList.add('ocuto');
+        secao_2.classList.remove('minhas-reservas');
+        secao_2.classList.add('ocuto');
+    }
 }

@@ -112,9 +112,6 @@ header {
    display: none;
 }
 
-.ocuto {
-    display: none;
-}
 
 .menu-mobily {
     width: 100%;
@@ -172,6 +169,7 @@ header {
     border-radius: 10px;
     border: 1px solid var(--cor1);
     padding: 10px;
+    cursor: pointer;
 }
 
 .reservas .sidbar .sidbar-item {
@@ -193,6 +191,14 @@ header {
 }
 
 
+.ocuto {
+    display: none;
+}
+
+.open {
+    display: flex;
+}
+
 .reservas .minhas-reservas {
     width: 60%;
     display: flex;
@@ -200,6 +206,7 @@ header {
     flex-wrap: wrap;
     flex-grow: 1;
 }
+
 
 .reservas .minhas-reservas  .title h1 {
     font-size: 1.8rem;
@@ -332,10 +339,10 @@ header {
     color: var(--cor2);
 }
 
-.minhas-reservas .card-servico .perfil .formulario form input {
+.minhas-reservas .card-servico .perfil .formulario form input, select, output {
     margin-bottom: 20px;
     border-radius: 5px;
-    padding: 5px;
+    padding: 7px;
     border: 1px solid var(--cor3);
     outline: none;
 }

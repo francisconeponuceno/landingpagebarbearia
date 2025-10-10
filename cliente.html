@@ -59,21 +59,22 @@
 
     <section class="reservas">
         <div class="sidbar">
-            <div class="sidbar-item select">
+            <div class="sidbar-item select botao_1" onclick="sidbar_minhas_reservas()">
                 <i class="fa-solid fa-calendar"></i>
                 <span>Minhas Reservas</span>
             </div>
-            <div class="sidbar-item">
+            <div class="sidbar-item botao_2" onclick="sidbar_novo_agendamento()">
                 <i class="fa-solid fa-plus"></i>
                 <span>Novo Agendamento</span>
             </div>
-            <div class="sidbar-item">
+            <div class="sidbar-item botao_3" onclick="sidbar_perfil()">
                 <i class="fa-solid fa-user login-icone"></i>
                 <span>Meu Perfil</span>
             </div>
         </div>
 
-        <div class="minhas-reservas" style="display: none;">
+        <!--Section Minhas Reservas-->
+        <div class="minhas-reservas secao_1">
             <div class="title">
                 <h1>Minhas Reservas</h1>
             </div>
@@ -167,14 +168,56 @@
 
         </div>
 
-        <div class="minhas-reservas" style="display: none;">
+        <!--Section de Agendamento-->
+        <div class="ocuto secao_2">
+            <div class="title">
+                <h1>Novo Agendamento</h1>
+            </div>
+            <div class="card-servico">
+                <div class="perfil">
+                   <h2>Agendar Serviço</h2>
+                   <div class="formulario">
+                        <form action="">
+                            <label for="servico">Selecione um Serviço:</label>
+                            <select name="sevico" id="servico">
+                                <option value=""></option>
+                                <option value="Corte_Mascolino">Corte Mascolino</option>
+                                <option value="Corte_Femenino">Corte Femenino</option>
+                                <option value="Barba_&_Bigode">Barba & Bigode</option>
+                                <option value="Hidratação">Hidratação</option>
+                            </select>
+                            <label for="profissional">Selecione um Profissional:</label>
+                            <select name="profissional" id="profissional">
+                                <option value=""></option>
+                                <option value="Jão_de_Deus">Jão de Deus</option>
+                                <option value="Marina_Silvia">Marina Silvia</option>
+                                <option value="Marcelo_de_Castro">Marcelo de Castro</option>
+                                <option value="Fabio_de_Jesus">Fabio de Jesus</option>
+                            </select>
+                            <label for="">Data do Agendamento:</label>
+                            <input type="date">
+                            <label for="">Orários Disponível:</label>
+                            <input type="time">
+                            <div class="botoes">
+                                <button class="botao">
+                                    <i class="fa-solid fa-calendar-check"></i>
+                                    Agendar</button>
+                            </div>
+                        </form>
+                   </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Section de Perfil-->
+        <div class="ocuto secao_3">
             <div class="title">
                 <h1>Meu Perfil</h1>
             </div>
             <div class="card-servico">
                 <div class="perfil">
-                   <h2>Informações Pessoais</h2>
-                   <div class="formulario">
+                    <h2>Informações Pessoais</h2>
+                    <div class="formulario">
                         <h4>Editar</h4>
                         <form action="">
                             <label for="">Nome:</label>
@@ -188,44 +231,7 @@
                                 <button class="botao">Excluir</button>
                             </div>
                         </form>
-                   </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="minhas-reservas">
-            <div class="title">
-                <h1>Novo Agendamento</h1>
-            </div>
-            <div class="card-servico">
-                <div class="perfil">
-                   <h2>Agendar Serviço</h2>
-                   <div class="formulario">
-                        <form action="">
-                            <label for="servico">Selecione um Serviço:</label>
-                            <select name="sevico" id="servico">
-                                <option value="">-- Selecione um Serviço --</option>
-                                <option value="Corte_Mascolino">Corte Mascolino</option>
-                                <option value="Corte_Femenino">Corte Femenino</option>
-                                <option value="Barba_&_Bigode">Barba & Bigode</option>
-                                <option value="Hidratação">Hidratação</option>
-                            </select>
-                            <label for="profissional">Selecione um Profissional:</label>
-                            <select name="profissional" id="profissional">
-                                <option value="">-- Selecione um Profissional --</option>
-                                <option value="Jão_de_Deus">Jão de Deus</option>
-                                <option value="Marina_Silvia">Marina Silvia</option>
-                                <option value="Marcelo_de_Castro">Marcelo de Castro</option>
-                                <option value="Fabio_de_Jesus">Fabio de Jesus</option>
-                            </select>
-                            <label for="">Data do Agendamento:</label>
-                            <input type="date" value="Data">
-                            <label for="">Orários Disponível:</label>
-                            <div class="botoes">
-                                <button class="botao">Agendar</button>
-                            </div>
-                        </form>
-                   </div>
+                    </div>
                 </div>
             </div>
         </div>
