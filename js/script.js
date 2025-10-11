@@ -22,6 +22,7 @@ let botao_3 = document.querySelector('.botao_3');
 let secao_1 = document.querySelector('.secao_1');
 let secao_2 = document.querySelector('.secao_2');
 let secao_3 = document.querySelector('.secao_3');
+let secao_4 = document.querySelector('.secao_4');
 
 function sidbar_minhas_reservas() {
     
@@ -37,6 +38,15 @@ function sidbar_minhas_reservas() {
         secao_2.classList.add('ocuto');
         secao_3.classList.remove('minhas-reservas');
         secao_3.classList.add('ocuto');
+        secao_4.classList.remove('minhas-reservas');
+        secao_4.classList.add('ocuto');
+    }
+
+    if (botao_1.classList.contains('select')) {
+        secao_4.classList.remove('minhas-reservas');
+        secao_4.classList.add('ocuto');
+        secao_1.classList.remove('ocuto');
+        secao_1.classList.add('minhas-reservas');
     }
 } 
 
@@ -54,6 +64,8 @@ function sidbar_novo_agendamento() {
         secao_1.classList.add('ocuto');
         secao_3.classList.remove('minhas-reservas');
         secao_3.classList.add('ocuto');
+        secao_4.classList.remove('minhas-reservas');
+        secao_4.classList.add('ocuto');
     }
 }
 
@@ -71,6 +83,8 @@ function sidbar_perfil() {
         secao_1.classList.add('ocuto');
         secao_2.classList.remove('minhas-reservas');
         secao_2.classList.add('ocuto');
+        secao_4.classList.remove('minhas-reservas');
+        secao_4.classList.add('ocuto');
     }
 }
 
@@ -93,7 +107,17 @@ function sidbarMenu_reservas() {
         secao_2.classList.add('ocuto');
         secao_3.classList.remove('minhas-reservas');
         secao_3.classList.add('ocuto');
+        secao_4.classList.remove('minhas-reservas');
+        secao_4.classList.add('ocuto');
     }
+
+    if (botao_1.classList.contains('select')) {
+        secao_4.classList.remove('minhas-reservas');
+        secao_4.classList.add('ocuto');
+        secao_1.classList.remove('ocuto');
+        secao_1.classList.add('minhas-reservas');
+    }
+    menuShow()
 } 
 
 function sidbarMenu_agendamento() {
@@ -110,7 +134,10 @@ function sidbarMenu_agendamento() {
         secao_1.classList.add('ocuto');
         secao_3.classList.remove('minhas-reservas');
         secao_3.classList.add('ocuto');
+        secao_4.classList.remove('minhas-reservas');
+        secao_4.classList.add('ocuto');
     }
+    menuShow()
 }
 
 function sidbarMenu_perfil() {
@@ -127,8 +154,81 @@ function sidbarMenu_perfil() {
         secao_1.classList.add('ocuto');
         secao_2.classList.remove('minhas-reservas');
         secao_2.classList.add('ocuto');
+        secao_4.classList.remove('minhas-reservas');
+        secao_4.classList.add('ocuto');
     }
+    menuShow()
+}
+
+function reagendar() {
+        secao_4.classList.remove('ocuto');
+        secao_4.classList.add('minhas-reservas');
+        secao_1.classList.remove('minhas-reservas');
+        secao_1.classList.add('ocuto');
+        secao_2.classList.remove('minhas-reservas');
+        secao_2.classList.add('ocuto');
+        secao_3.classList.remove('minhas-reservas');
+        secao_3.classList.add('ocuto');
 }
 
 
+// FUNÇÃO DE REAGENDAMENTO
 
+const botoes = document.querySelectorAll('.btn-reagendar');
+const modal = document.getElementById('modal');
+const closeBtn = document.querySelector('.close');
+
+botoes.forEach(botao => {
+  botao.addEventListener('click', () => {
+    const card = botao.closest('.card-servico');
+
+    const servicoTexto = card.querySelector('.descricao h2').textContent.trim();
+    const profissional = card.querySelector('.descricao span').textContent.replace('Com ', '').trim();
+    const spans = card.querySelectorAll('.data-hora span');
+    const data = spans[0].textContent.trim();
+    const hora = spans[1].textContent.trim();
+
+    // Converter data para formato yyyy-mm-dd
+    const [dia, mes, ano] = data.split('/');
+    const dataFormatada = `${ano}-${mes}-${dia}`;
+
+    // Mapeamento dos serviços
+    const mapaServicos = {
+      "Corte Masculino": "Corte_Mascolino",
+      "Corte Feminino": "Corte_Femenino",
+      "Barba & Bigode": "Barba_&_Bigode",
+      "Hidratação": "Hidratação"
+    };
+    const valorSelect = mapaServicos[servicoTexto] || "";
+
+    // Mapeamento dos profissionais
+    const mapaProfissionais = {
+      "João de Deus": "Joao_de_Deus",
+      "Marina Silvia": "Marina_Silvia",
+      "Frederico": "Frederico",
+    };
+    const valorProf = mapaProfissionais[profissional] || "";
+
+
+    // Preenche o formulário
+    document.getElementById('servico').value = valorSelect;
+    document.getElementById('profissional').value = valorProf;
+    document.getElementById('input-data').value = dataFormatada;
+    document.getElementById('input-hora').value = hora;
+
+    // Abre o modal
+    modal.style.display = 'block';
+  });
+});
+
+// Fecha o modal ao clicar no "X"
+closeBtn.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+// Fecha o modal clicando fora dele
+window.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modal.style.display = 'none';
+  }
+});

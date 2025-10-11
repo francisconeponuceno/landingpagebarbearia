@@ -102,7 +102,7 @@
                         <span>R$ 45,00</span>
                     </div>
                     <div class="reagendar">
-                        <button><i class="fa-solid fa-newspaper"></i> Reagendar</button>
+                        <button class="btn-reagendar" onclick="reagendar()"><i class="fa-solid fa-newspaper"></i> Reagendar</button>
                     </div>
                 </div>
             </div>
@@ -112,15 +112,15 @@
                         <i class="fa-solid fa-scissors"></i>
                     </div>
                     <div class="descricao">
-                        <h2>Corte Mascolino</h2>
-                        <span>Com João</span>
+                        <h2>Corte Femenino</h2>
+                        <span>Com Marina Silvia</span>
                         <div class="data-hora">
                             <i class="fa-solid fa-calendar"></i>
-                            <span>06/10/2025</span>
+                            <span>11/10/2025</span>
                         </div>
                         <div class="data-hora">
                             <i class="fa-solid fa-clock"></i>
-                            <span>20:30</span>
+                            <span>13:30</span>
                         </div>
                     </div>
                 </div>
@@ -130,7 +130,7 @@
                         <span>R$ 45,00</span>
                     </div>
                     <div class="reagendar">
-                        <button><i class="fa-solid fa-newspaper"></i> Reagendar</button>
+                        <button class="btn-reagendar" onclick="reagendar()"><i class="fa-solid fa-newspaper"></i> Reagendar</button>
                     </div>
                 </div>
             </div>
@@ -140,15 +140,15 @@
                         <i class="fa-solid fa-scissors"></i>
                     </div>
                     <div class="descricao">
-                        <h2>Corte Mascolino</h2>
-                        <span>Com João</span>
+                        <h2>Barba & Bigode</h2>
+                        <span>Com Frederico</span>
                         <div class="data-hora">
                             <i class="fa-solid fa-calendar"></i>
-                            <span>06/10/2025</span>
+                            <span>15/10/2025</span>
                         </div>
                         <div class="data-hora">
                             <i class="fa-solid fa-clock"></i>
-                            <span>20:30</span>
+                            <span>21:00</span>
                         </div>
                     </div>
                 </div>
@@ -158,7 +158,7 @@
                         <span>R$ 45,00</span>
                     </div>
                     <div class="reagendar">
-                        <button><i class="fa-solid fa-newspaper"></i> Reagendar</button>
+                        <button class="btn-reagendar" onclick="reagendar()"><i class="fa-solid fa-newspaper"></i> Reagendar</button>
                     </div>
                 </div>
             </div>
@@ -196,9 +196,7 @@
                             <label for="">Orários Disponível:</label>
                             <input type="time">
                             <div class="botoes">
-                                <button class="botao">
-                                    <i class="fa-solid fa-calendar-check"></i>
-                                    Agendar</button>
+                                <button class="botao"><i class="fa-solid fa-calendar-check"></i>  Agendar</button>
                             </div>
                         </form>
                    </div>
@@ -232,6 +230,42 @@
                 </div>
             </div>
         </div>
+
+        <!--Section de Reagendamento-->
+        <!-- === MODAL (FORMULÁRIO DE REAGENDAMENTO) === -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">x</span>
+                <h2>Reagendar Serviço</h2>
+                <form id="form-reagendar">
+                    <label for="servico">Selecione um Serviço:</label>
+                    <select name="servico" id="servico">
+                        <option value=""></option>
+                        <option value="Corte_Mascolino">Corte Masculino</option>
+                        <option value="Corte_Femenino">Corte Feminino</option>
+                        <option value="Barba_&_Bigode">Barba & Bigode</option>
+                        <option value="Hidratação">Hidratação</option>
+                    </select>
+                    
+                    <label for="profissional">Selecione um Profissional:</label>
+                    <select name="profissional" id="profissional">
+                        <option value=""></option>
+                        <option value="Joao_de_Deus">João de Deus</option>
+                        <option value="Marina_Silvia">Marina Silvia</option>
+                        <option value="Frederico">Frederico</option>
+                    </select>
+                    <label for="input-data">Data:</label>
+                    <input type="date" id="input-data">
+                    <label for="input-hora">Hora:</label>
+                    <input type="time" id="input-hora">
+                    <div class="form-botao">
+                        <button class="botao-modal" type="submit"><i class="fa-solid fa-calendar-check"></i> reagendar</button>
+                        <button class="botao-modal" type="submit"><i class="fa-solid fa-trash"></i> Excluir</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
     </section>
     <script src="js/script.js"></script>
 </body>
