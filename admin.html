@@ -6,8 +6,8 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/cliente.css">
-    <title>Cliente</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <title>administrador</title>
 </head>
 <body>
     <header>
@@ -17,7 +17,7 @@
         </div>
         <div class="menu">
             <div class="cliente">
-                <span>Área do Cliente</span>
+                <span>Área do Administrador</span>
             </div>
             <div class="user">
                 <div class="login">
@@ -38,141 +38,82 @@
                 <i class="fa-solid fa-user login-icone"></i>
                 <span>Marina Silvia</span>
             </div>
-            <div class="login-mobili select-menu botaoMenuBurger_1" onclick="sidbarMenu_reservas()">
+            <div class="login-mobili select-menu botaoMenuBurger_1" onclick="sidbarMenu_AgendaDia()">
                 <i class="fa-solid fa-calendar"></i>
-                <span>Minhas Reservas</span>
+                <span>Agenda do Dia</span>
             </div>
-            <div class="login-mobili botaoMenuBurger_2" onclick="sidbarMenu_agendamento()">
+            <div class="login-mobili botaoMenuBurger_2" onclick="sidbarMenu_Servicos()">
+                <i class="fa-solid fa-bolt"></i>
+                <span>Serviços</span>
+            </div>
+            <div class="login-mobili botaoMenuBurger_3" onclick="sidbarMenu_Profifionais()">
+                <i class="fa-solid fa-users"></i>
+                <span>Profissionais</span>
+            </div>
+            <div class="login-mobili botaoMenuBurger_4" onclick="sidbarMenu_CadProfissional()">
                 <i class="fa-solid fa-plus"></i>
-                <span>Novo Agendamento</span>
+                <span>profissional</span>
             </div>
-            <div class="login-mobili botaoMenuBurger_3" onclick="sidbarMenu_perfil()">
-                <i class="fa-solid fa-user login-icone"></i>
-                <span>Meu Perfil</span>
+            <div class="login-mobili botaoMenuBurger_5" onclick="sidbarMenu_cadServiço()">
+                <i class="fa-solid fa-plus"></i>
+                <span>Serviço</span>
             </div>
             <div class="login-mobili">
                 <i class="fa-solid fa-right-from-bracket"></i>
                 <span><a href="login.html">Sair</a></span>
             </div>
+            
         </div>
     </div>
 
     <section class="reservas">
         <div class="sidbar">
-            <div class="sidbar-item select botao_1" onclick="sidbar_minhas_reservas()">
+            <div class="sidbar-item select botao_1" onclick="sidbar_agendaDia()">
                 <i class="fa-solid fa-calendar"></i>
-                <span>Minhas Reservas</span>
+                <span>Agenda do Dia</span>
             </div>
-            <div class="sidbar-item botao_2" onclick="sidbar_novo_agendamento()">
+            <div class="sidbar-item botao_2" onclick="sidbar_servicos()">
+                <i class="fa-solid fa-bolt"></i>
+                <span>Serviços</span>
+            </div>
+            <div class="sidbar-item botao_3" onclick="sidbar_profissionais()">
+                <i class="fa-solid fa-users"></i>
+                <span>Profissionais</span>
+            </div>
+            <div class="sidbar-item botao_4" onclick="sidbar_cadProfissional()">
                 <i class="fa-solid fa-plus"></i>
-                <span>Novo Agendamento</span>
+                <span>Profissional</span>
             </div>
-            <div class="sidbar-item botao_3" onclick="sidbar_perfil()">
-                <i class="fa-solid fa-user login-icone"></i>
-                <span>Meu Perfil</span>
+            <div class="sidbar-item botao_5" onclick="sidbar_cadServiço()">
+                <i class="fa-solid fa-plus"></i>
+                <span>Serviço</span>
             </div>
         </div>
 
-        <!--Section Minhas Reservas-->
+        <!--Section Agenda do dia-->
         <div class="minhas-reservas secao_1">
             <div class="title">
-                <h1>Minhas Reservas</h1>
+                <h1>Agenda do Dia</h1>
             </div>
+            
             <div class="card-servico">
-                <div class="servico">
-                    <div class="icone">
-                        <i class="fa-solid fa-scissors"></i>
-                    </div>
-                    <div class="descricao">
-                        <h2>Corte Mascolino</h2>
-                        <span>Com João</span>
-                        <div class="data-hora">
-                            <i class="fa-solid fa-calendar"></i>
-                            <span>06/10/2025</span>
-                        </div>
-                        <div class="data-hora">
-                            <i class="fa-solid fa-clock"></i>
-                            <span>20:30</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="confirmacao">
-                    <div class="confirmado">
-                        <h2 class="status">Confirmado</h2>
-                        <span>R$ 45,00</span>
-                    </div>
-                    <div class="reagendar">
-                        <button class="btn-reagendar" onclick="reagendar()"><i class="fa-solid fa-newspaper"></i> Reagendar</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card-servico">
-                <div class="servico">
-                    <div class="icone">
-                        <i class="fa-solid fa-scissors"></i>
-                    </div>
-                    <div class="descricao">
-                        <h2>Corte Femenino</h2>
-                        <span>Com Marina Silvia</span>
-                        <div class="data-hora">
-                            <i class="fa-solid fa-calendar"></i>
-                            <span>11/10/2025</span>
-                        </div>
-                        <div class="data-hora">
-                            <i class="fa-solid fa-clock"></i>
-                            <span>13:30</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="confirmacao">
-                    <div class="confirmado">
-                        <h2 class="status">Confirmado</h2>
-                        <span>R$ 45,00</span>
-                    </div>
-                    <div class="reagendar">
-                        <button class="btn-reagendar" onclick="reagendar()"><i class="fa-solid fa-newspaper"></i> Reagendar</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card-servico">
-                <div class="servico">
-                    <div class="icone">
-                        <i class="fa-solid fa-scissors"></i>
-                    </div>
-                    <div class="descricao">
-                        <h2>Barba & Bigode</h2>
-                        <span>Com Frederico</span>
-                        <div class="data-hora">
-                            <i class="fa-solid fa-calendar"></i>
-                            <span>15/10/2025</span>
-                        </div>
-                        <div class="data-hora">
-                            <i class="fa-solid fa-clock"></i>
-                            <span>21:00</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="confirmacao">
-                    <div class="confirmado">
-                        <h2 class="status">Confirmado</h2>
-                        <span>R$ 45,00</span>
-                    </div>
-                    <div class="reagendar">
-                        <button class="btn-reagendar" onclick="reagendar()"><i class="fa-solid fa-newspaper"></i> Reagendar</button>
-                    </div>
-                </div>
+                <table>
+                    <tr>
+                        
+                    </tr>
+                </table>
+                
             </div>
 
         </div>
 
-        <!--Section de Agendamento-->
+        <!--Section de Serviços-->
         <div class="ocuto secao_2">
             <div class="title">
-                <h1>Novo Agendamento</h1>
+                <h1>Serviços</h1>
             </div>
             <div class="card-servico">
                 <div class="perfil">
-                   <h2>Agendar Serviço</h2>
                    <div class="formulario">
                         <form action="">
                             <label for="servico">Selecione um Serviço:</label>
@@ -204,10 +145,10 @@
             </div>
         </div>
 
-        <!--Section de Perfil-->
+        <!--Section de Profissionais-->
         <div class="ocuto secao_3">
             <div class="title">
-                <h1>Meu Perfil</h1>
+                <h1>Profissionais</h1>
             </div>
             <div class="card-servico">
                 <div class="perfil">
@@ -230,6 +171,61 @@
                 </div>
             </div>
         </div>
+
+        <!--Section de cadastro de profissionais-->
+        <div class="ocuto secao_4">
+            <div class="title">
+                <h1>Cadastro de Profissionais</h1>
+            </div>
+            <div class="card-servico">
+                <div class="perfil">
+                    <h2>Informações Pessoais</h2>
+                    <div class="formulario">
+                        <h4>Editar</h4>
+                        <form action="">
+                            <label for="">Nome:</label>
+                            <input type="text" value="Marina Silvia">
+                            <label for="">Email:</label>
+                            <input type="email" value="franciscocan1986@gmail.com">
+                            <label for="">Telefone:</label>
+                            <input type="tel" value="86 99452-0423">
+                            <div class="botoes">
+                                <button class="botao"><i class="fa-solid fa-rotate-right"></i> Atualizar</button>
+                                <button class="botao"><i class="fa-solid fa-trash"></i> Excluir</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Section de cadastro de serviço-->
+        <div class="ocuto secao_5">
+            <div class="title">
+                <h1>Cadastro de Serviços</h1>
+            </div>
+            <div class="card-servico">
+                <div class="perfil">
+                    <h2>Informações Pessoais</h2>
+                    <div class="formulario">
+                        <h4>Editar</h4>
+                        <form action="">
+                            <label for="">Nome:</label>
+                            <input type="text" value="Marina Silvia">
+                            <label for="">Email:</label>
+                            <input type="email" value="franciscocan1986@gmail.com">
+                            <label for="">Telefone:</label>
+                            <input type="tel" value="86 99452-0423">
+                            <div class="botoes">
+                                <button class="botao"><i class="fa-solid fa-rotate-right"></i> Atualizar</button>
+                                <button class="botao"><i class="fa-solid fa-trash"></i> Excluir</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
         <!--Section de Reagendamento-->
         <!-- === MODAL (FORMULÁRIO DE REAGENDAMENTO) === -->
@@ -267,6 +263,6 @@
         </div>
 
     </section>
-    <script src="js/script.js"></script>
+    <script src="js/script_admin.js"></script>
 </body>
 </html>
