@@ -41,6 +41,41 @@ body {
 
 /* FIM DO ESTILO DE BOTOES */
 
+
+/* ESTILO DOS STATUS */
+
+.aguard{
+    background-color: var(--cor5);
+    font-size: 0.7rem;
+    text-align: center;
+    padding: 5px;
+    border-radius: 20px;
+    color: var(--cor2);
+    width: 90px;
+}
+
+.atendido{
+    background-color: rgb(132, 194, 132);
+    font-size: 0.7rem;
+    text-align: center;
+    padding: 5px;
+    border-radius: 20px;
+    color: rgb(7, 41, 7);
+    width: 90px;
+}
+
+.cancelado{
+    background-color: rgb(245, 146, 146);
+    font-size: 0.7rem;
+    text-align: center;
+    padding: 5px;
+    border-radius: 20px;
+    color: rgb(114, 1, 1);
+    width: 90px;
+}
+
+/*  FIM DO ESTILO DOS STATUS*/
+
 /* INICIO ESTILO HEADER */
 header {
     background-color: var(--cor1);
@@ -213,6 +248,40 @@ header {
     flex-grow: 1;
 }
 
+.reservas .minhas-reservas  .title {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+
+.reservas .minhas-reservas  .title form {
+    border:  1px solid var(--cor3);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    padding: 3px;
+    border-radius: 30px;
+}
+
+.reservas .minhas-reservas  .title form input {
+    width: 90%;
+    border: none;
+    outline: none;
+}
+
+.reservas .minhas-reservas  .title form button {
+    border:  none;
+    background: none;
+}
+
+.reservas .minhas-reservas  .title form  button{
+    color: var(--cor5);
+}
 
 .reservas .minhas-reservas  .title h1 {
     font-size: 1.8rem;
@@ -287,9 +356,6 @@ header {
 }
 
 
-
-
-
 /* ESTILO DA TABELA*/
 .card-servico thead th {
     background-color: var(--cor3);
@@ -321,7 +387,7 @@ table {
 }
 
 .card-servico .div-table, td {
-    padding: 10px 0;
+    padding: 5px 5px;
 }
 
 
@@ -329,8 +395,8 @@ table {
 tr>td {
     flex-wrap: wrap;
     color: var(--cor2);
-    text-align: center;
-    
+    text-align: left;
+    font-size: 0.8rem;
 }
 
 .card-servico .div-table i {

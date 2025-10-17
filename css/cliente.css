@@ -286,13 +286,33 @@ header {
     margin-bottom: 10px;
 }
 
-.status{
+.aguard{
     background-color: var(--cor5);
     font-size: 0.8rem;
     text-align: center;
     padding: 5px;
     border-radius: 20px;
     color: var(--cor2);
+    width: 100px;
+}
+
+.atendido{
+    background-color: rgb(132, 194, 132);
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 5px;
+    border-radius: 20px;
+    color: rgb(7, 41, 7);
+    width: 100px;
+}
+
+.cancelado{
+    background-color: rgb(245, 146, 146);
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 5px;
+    border-radius: 20px;
+    color: rgb(114, 1, 1);
     width: 100px;
 }
 
