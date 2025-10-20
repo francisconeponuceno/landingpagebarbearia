@@ -95,7 +95,7 @@
             <div class="title">
                 <h1>Agenda do Dia</h1>
                 <form action="">
-                    <input type="text">
+                    <input type="text" placeholder="pesquisa">
                     <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </form>
             </div>
@@ -154,6 +154,10 @@
         <div class="ocuto secao_2">
             <div class="title">
                 <h1>Serviços</h1>
+                <form action="">
+                    <input type="text" placeholder="pesquisa">
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
             </div>
             <div class="card-servico">
                 <div class="div-table">
@@ -162,8 +166,7 @@
                             <tr>
                                 <th>Serviço</th>
                                 <th>Valor</th>
-                                <th>Profissional</th>
-                                <th>Temo estimado</th>
+                                <th>Tempo estimado</th>
                                 <th>Editar</th>
                                 <th>Excluir</th>
                             </tr>
@@ -171,7 +174,6 @@
                         <tr>
                             <td>Corte Mascolino</td>
                             <td>R$ 30</td>
-                            <td>Joao de Deus</td>
                             <td>30 min</td>
                             <td>
                                 <form method="post" action="">
@@ -187,7 +189,6 @@
                         <tr>
                             <td>Corte Mascolino</td>
                             <td>R$ 30</td>
-                            <td>Marina Silvia</td>
                             <td>30 min</td>
                             <td>
                                 <form method="post" action="">
@@ -209,25 +210,57 @@
         <div class="ocuto secao_3">
             <div class="title">
                 <h1>Profissionais</h1>
+                <form action="">
+                    <input type="text" placeholder="pesquisa">
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
             </div>
             <div class="card-servico">
-                <div class="perfil">
-                    <h2>Informações Pessoais</h2>
-                    <div class="formulario">
-                        <h4>Editar</h4>
-                        <form action="">
-                            <label for="">Nome:</label>
-                            <input type="text" value="Marina Silvia">
-                            <label for="">Email:</label>
-                            <input type="email" value="franciscocan1986@gmail.com">
-                            <label for="">Telefone:</label>
-                            <input type="tel" value="86 99452-0423">
-                            <div class="botoes">
-                                <button class="botao"><i class="fa-solid fa-rotate-right"></i> Atualizar</button>
-                                <button class="botao"><i class="fa-solid fa-trash"></i> Excluir</button>
-                            </div>
-                        </form>
-                    </div>
+                <div class="div-table">
+                    <table class="tabela">
+                        <thead>
+                            <tr>
+                                <th>Profissional</th>
+                                <th>Especialidades</th>
+                                <th>Horário Atendimento</th>
+                                <th>Telefone</th>
+                                <th>Editar</th>
+                                <th>Excluir</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>João Silva</td>
+                            <td>Corte masculino,Barba</td>
+                            <td>Seg-Sex, 09:00-18:00</td>
+                            <td>86 99999-9999</td>
+                            <td>
+                                <form method="post" action="">
+                                    <button type="submit" class="fa-solid fa-pen-to-square btn"></button>
+                                </form>
+                            </td>
+                            <td>
+                                <form method="post" action="">
+                                    <button class="fa-solid fa-trash btn"></button>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Marina Silvia</td>
+                            <td>Corte Femenino, Hidratação</td>
+                            <td>Ter-sáb 10:00-19:00</td>
+                            <td>86 99999-9999</td>
+                            <td>
+                                <form method="post" action="">
+                                    <button type="submit" class="fa-solid fa-pen-to-square btn"></button>
+                                </form>
+                            </td>
+                            <td>
+                                <form method="post" action="">
+                                    <button class="fa-solid fa-trash btn"></button>
+                                </form>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
@@ -239,19 +272,18 @@
             </div>
             <div class="card-servico">
                 <div class="perfil">
-                    <h2>Informações Pessoais</h2>
                     <div class="formulario">
-                        <h4>Editar</h4>
                         <form action="">
                             <label for="">Nome:</label>
-                            <input type="text" value="Marina Silvia">
-                            <label for="">Email:</label>
-                            <input type="email" value="franciscocan1986@gmail.com">
+                            <input type="text">
+                            <label for="">Especialidades:</label>
+                            <input type="text">
+                            <label for="">Horário Atendimento</label>
+                            <input type="text">
                             <label for="">Telefone:</label>
-                            <input type="tel" value="86 99452-0423">
+                            <input type="tel">
                             <div class="botoes">
-                                <button class="botao"><i class="fa-solid fa-rotate-right"></i> Atualizar</button>
-                                <button class="botao"><i class="fa-solid fa-trash"></i> Excluir</button>
+                                <button class="botao"><i class="fa-solid fa-address-card"></i> cadastrar</button>
                             </div>
                         </form>
                     </div>
@@ -266,20 +298,17 @@
             </div>
             <div class="card-servico">
                 <div class="perfil">
-                    <h2>Informações Pessoais</h2>
                     <div class="formulario">
-                        <h4>Editar</h4>
                         <form action="">
-                            <label for="">Nome:</label>
-                            <input type="text" value="Marina Silvia">
-                            <label for="">Email:</label>
-                            <input type="email" value="franciscocan1986@gmail.com">
-                            <label for="">Telefone:</label>
-                            <input type="tel" value="86 99452-0423">
+                            <label for="">Serviço:</label>
+                            <input type="text">
+                            <label for="">Valor:</label>
+                            <input type="number">
+                            <label for="">Tempo estimado:</label>
+                            <input type="text">
                             <div class="botoes">
-                                <button class="botao"><i class="fa-solid fa-rotate-right"></i> Atualizar</button>
-                                <button class="botao"><i class="fa-solid fa-trash"></i> Excluir</button>
-                            </div>
+                                <button class="botao"><i class="fa-solid fa-address-card"></i> Cadastrar</button>
+                                
                         </form>
                     </div>
                 </div>
