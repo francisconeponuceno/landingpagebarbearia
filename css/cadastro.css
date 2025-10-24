@@ -138,7 +138,7 @@ body {
 
 .container .principal .cadastro .formulario input {
     margin-bottom: 5px;
-    padding: 3px;
+    padding: 8px;
     border: 1px solid var(--cor3);
     border-radius: 5px;
     outline: none;

@@ -138,7 +138,7 @@ body {
 
 .container .principal .login .formulario input {
     margin-bottom: 5px;
-    padding: 3px;
+    padding: 8px;
     border: 1px solid var(--cor3);
     border-radius: 5px;
     outline: none;
@@ -146,6 +146,7 @@ body {
 
 .container .principal .login .formulario button {
     border: none;
+    margin-top: 10px;
     border-radius: 5px;
     background-color: var(--cor5);
     padding: 5px;
